@@ -42,7 +42,8 @@ public class NearestSmallerElement {
 
 
     List<Integer> nearestSmallestElementTowardsLeftIndex(List<Integer> input) {
-
+        Stack<Integer> st = new Stack<>();
+        return null;
     }
 
 
