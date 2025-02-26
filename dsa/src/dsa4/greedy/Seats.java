@@ -85,7 +85,7 @@ Explanation 2:
  They are already together. So, the cost is zero.
 
 
- TODO: Trick: Store the position of all the occupied seats in arr. Now find the median of this array and towards both  side of this array try to bring all occupied together
+ TODO: **Trick: Store the position of all the occupied seats in arr. Now find the median of this array and towards both  side of this array try to bring all occupied together**
 
  */
 
