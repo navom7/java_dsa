@@ -46,6 +46,29 @@ TODO: Trick: At any index i
 
  */
 
-public class MaximumSumValue {
+import java.util.ArrayList;
 
+public class MaximumSumValue {
+    public int solve(ArrayList<Integer> A, int B, int C, int D) {
+        int NA = A.size();
+        int[][] dp = new int[NA][3];
+
+        for(int i = 0; i < NA; i++) {
+            for(int j = 0; j < 3; j++) {
+                dp[i][j] = Integer.MIN_VALUE;
+            }
+        }
+
+        dp[0][0] = B*A.get(0);
+        dp[0][1] = dp[0][0] + C*A.get(0);
+        dp[0][2] = dp[0][1] + D*A.get(0);
+
+        for(int i = 1; i < NA; i++) {
+            dp[i][0] = Math.max(dp[i-1][0], B*A.get(i));
+            dp[i][1] = Math.max(dp[i-1][1], dp[i][0] + C*A.get(i));
+            dp[i][2] = Math.max(dp[i-1][2], dp[i][1] + D*A.get(i));
+        }
+
+        return dp[NA-1][2];
+    }
 }
