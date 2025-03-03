@@ -23,7 +23,7 @@ Explanation: The triplet (3, 4, 5) is valid because nums[3] == 0 < nums[4] == 4 
 
 TODO: Follow up: Could you implement a solution that runs in O(n) time complexity and O(1) space complexity?
  */
-public class IncreasingTripletSubsequence {
+public class A304_IncreasingTripletSubsequence {
 
     //most optimised solution
     public boolean increasingTriplet(int[] nums) {
