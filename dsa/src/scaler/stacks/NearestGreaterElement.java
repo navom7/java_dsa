@@ -1,4 +1,4 @@
-package stacks;
+package scaler.stacks;
 
 public class NearestGreaterElement {
 

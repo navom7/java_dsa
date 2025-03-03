@@ -1,4 +1,4 @@
-package dsa4.dp2D;
+package scaler.dsa4.dp2D;
 
 import java.util.ArrayList;
 

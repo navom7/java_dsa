@@ -1,4 +1,4 @@
-package linked_list;
+package scaler.linked_list;
 
 public class Node {
     public Integer key;

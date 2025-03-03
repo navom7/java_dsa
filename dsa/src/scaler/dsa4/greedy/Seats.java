@@ -1,4 +1,4 @@
-package dsa4.greedy;
+package scaler.dsa4.greedy;
 
 
 /*

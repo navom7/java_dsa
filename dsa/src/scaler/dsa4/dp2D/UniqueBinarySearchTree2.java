@@ -1,4 +1,4 @@
-package dsa4.dp2D;
+package scaler.dsa4.dp2D;
 
 /*
 Given an integer A, how many structurally unique BST's (binary search trees) exist that can store values 1...A?
@@ -43,8 +43,8 @@ Output 2:
  2
  */
 
-public class CatalanNumber {
-    public int catalanNumbers(int A) {
+public class UniqueBinarySearchTree2 {
+    public int numTrees(int A) {
         int[] dp = new int[A+1];
 
         dp[0] = 1;

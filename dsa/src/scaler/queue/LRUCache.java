@@ -1,6 +1,6 @@
-package queue;
+package scaler.queue;
 
-import linked_list.Node;
+import scaler.linked_list.Node;
 
 import java.util.HashMap;
 import java.util.Map;

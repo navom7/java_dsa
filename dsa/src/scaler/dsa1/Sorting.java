@@ -1,4 +1,4 @@
-package dsa1;
+package scaler.dsa1;
 
 import java.util.ArrayList;
 

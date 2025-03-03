@@ -1,4 +1,4 @@
-package dsa1.sorting;
+package scaler.dsa1.sorting;
 
 import java.util.ArrayList;
 

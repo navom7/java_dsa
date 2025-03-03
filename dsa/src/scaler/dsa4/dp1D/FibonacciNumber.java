@@ -1,4 +1,4 @@
-package dsa4.dp1D;
+package scaler.dsa4.dp1D;
 
 
 /*
