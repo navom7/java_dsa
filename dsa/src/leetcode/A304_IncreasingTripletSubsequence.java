@@ -25,7 +25,7 @@ TODO: Follow up: Could you implement a solution that runs in O(n) time complexit
  */
 public class A304_IncreasingTripletSubsequence {
 
-    //most optimised solution
+    //TODO: most optimised solution
     public boolean increasingTriplet(int[] nums) {
         int small = Integer.MAX_VALUE;
         int big = Integer.MAX_VALUE;
