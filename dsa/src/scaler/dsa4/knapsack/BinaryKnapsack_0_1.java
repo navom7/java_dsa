@@ -117,26 +117,34 @@ public class BinaryKnapsack_0_1 {
         return dp[C][N];
     }
 
-    //TODO: Iterative Approach with 1D DP array
+    //TODO: Iterative Approach with 1D DP array ||  Most optimised solution
     public int knapsackIterativeOptimised(ArrayList<Integer> A, ArrayList<Integer> B, int C) {
         int N = A.size();
-        int[] dp = new int[C+1];
+        int[] dp0 = new int[C+1];
+        int[] dp1 = new int[C+1];
 
-        for(int c = 1; c <= C; c++) {
-            for(int n = 1; n <= N; n++) {
+        for(int n = 1; n <= N; n++) {
+            for(int c = 0; c <= C; c++) {
+                if(c < B.get(n-1)) {
+                    if(n%2 == 0) dp0[c] = dp1[c];
+                    else dp1[c] = dp0[c];
+                } else {
+                    if(n%2 == 0) {
+                        int f1 = dp1[c];
+                        int f2 = dp1[c-B.get(n-1)] + A.get(n-1);
 
-                int f1 = dp[c][n-1];
-                int f2 = 0;
+                        dp0[c] = Math.max(f1, f2);
+                    } else {
+                        int f1 = dp0[c];
+                        int f2 = dp0[c-B.get(n-1)] + A.get(n-1);
 
-                if(B.get(n-1) <= c) {
-                    f2 = dp[c-B.get(n-1)][n-1] + A.get(n-1);
+                        dp1[c] = Math.max(f1, f2);
+                    }
                 }
-
-                dp[c][n] = Math.max(f1, f2);
             }
         }
 
-        return dp[C][N];
+        return N%2 == 0 ? dp0[C] : dp1[C];
     }
 
 
